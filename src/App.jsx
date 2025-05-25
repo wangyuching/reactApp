@@ -17,7 +17,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>5B1G0023 王昱晴</h1>
       <h2>Slider</h2>
       <div>
         <p>R:<MySlider /></p>
