@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import MySlider from './component/MySlider'
+import MyPanel from './component/MyPanel'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +25,8 @@ function App() {
         <p>G:<MySlider /></p>
         <p>B:<MySlider /></p>
       </div>
+      <h2>RGB色彩面板</h2>
+      <MyPanel />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

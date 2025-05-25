@@ -1,8 +1,18 @@
 import { useState } from "react";
 
-function MySlider() {
-    const [value, setValue] = useState(128);
-    const handleChange = (e) => { setValue(e.target.value) };
+function MySlider({ value, onChange }) {
+    const [internaValue, setInternaValue] = useState(128);
+    const isControlled = value !== undefined && onChange !== undefined;
+    const displayValue = isControlled ? value : internaValue;
+
+    const handleChange = (e) => {
+        const newValue = Number(e.target.value);
+        if (isControlled) {
+            onChange(newValue);
+        } else {
+            setInternaValue(newValue);
+        }
+    };
 
     return (
         <>
