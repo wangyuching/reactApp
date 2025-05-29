@@ -12,6 +12,7 @@ function MyPanel() {
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
+            padding:"15px"
         }}>
             <div style={{ marginBottom: '10px' }}>
                 R: <MySlider value={r} onChange={setR} />

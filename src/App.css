@@ -33,6 +33,13 @@
   }
 }
 
+.border{
+  width: 392px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 50px auto;
+}
+
 .card {
   padding: 2em;
 }
