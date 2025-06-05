@@ -35,7 +35,7 @@
 
 .border{
   width: 392px;
-  border: 1px solid black;
+  border: 1px solid  rgba(255, 255, 255, 0.87);
   border-radius: 10px;
   margin: 50px auto;
 }
