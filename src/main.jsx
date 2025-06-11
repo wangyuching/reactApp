@@ -6,7 +6,7 @@ import App from './App.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
 )
 
 // 在 HTML(index.html) 最上層找到 id 為 root 的根元素並 render 一個 App(App.jsx) 的元件。
