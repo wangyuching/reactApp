@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function MySlider({ value, onChange }) {
-  const [internalValue, setInternalValue] = useState(128);
+  const [internalValue, setInternalValue] = useState(128); //參考 App.jsx line11-13
   const isControlled = value !== undefined && onChange !== undefined; // 是否受控?皆有值為true(受控)。!== 嚴格不等於。undefined 尚未設定。
   const displayValue = isControlled ? value : internalValue; //是否受控? true 顯示value(from父元件)，false顯示internalValue(元件內部)。
 
