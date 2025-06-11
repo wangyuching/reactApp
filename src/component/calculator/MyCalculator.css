@@ -52,7 +52,7 @@
   font-weight: bold;
   box-shadow: 0 1px 4px #0001;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 .my-calculator-btn.number {
   background: #f0f4ff;

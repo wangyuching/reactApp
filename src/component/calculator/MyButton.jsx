@@ -1,14 +1,14 @@
-// MyButton 按鈕元件，根據 value 判斷按鈕類型與配色
 function MyButton({ value, onClick }) {
-  // 判斷是否為運算子（+、-、×、÷、=、C、←）
-  const isOperator = ["+", "-", "×", "÷", "=", "C", "←"].includes(value);
-  // 判斷是否為控制鍵（C、←、=）
+  const isOperator = ["+", "-", "×", "÷"].includes(value);
+  // 判斷是否為運算子（+、-、×、÷）
+  // 如果 value 是陣列中的其中一個元素，isOperator 會被設為 true，否則為 false。
   const isControl = ["C", "←", "="].includes(value);
-  // 決定 className
-  let btnClass = "my-calculator-btn number";
-  if (isOperator && !isControl) {
+  // 判斷是否為控制鍵（C、←、=）
+  // 如果 value 是陣列中的其中一個元素，isControl 會被設為 true，否則為 false。
+  let btnClass = "my-calculator-btn number";// 決定 className
+  if (isOperator) { // 如果是運算子
     btnClass = "my-calculator-btn operator";
-  } else if (isControl) {
+  } else if (isControl) { // 如果是控制鍵
     btnClass = "my-calculator-btn control";
   }
   return (

@@ -2,10 +2,10 @@
 function MyDisplay({ expression, result }) {
   return (
     <div className="my-calculator-display">
-      {/* 顯示運算式 */}
       <div className="expression">{expression || 0}</div>
-      {/* 顯示結果 */}
+      {/* 顯示運算式 */}
       <div className="result">{result !== "" ? result : ""}</div>
+      {/* 顯示結果 */}
     </div>
   );
 }

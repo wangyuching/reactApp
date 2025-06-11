@@ -1,4 +1,3 @@
-// MyKeypad 按鈕區元件，排列所有數字、運算子、控制鍵
 import MyButton from "./MyButton";
 
 // 按鈕排列設定
@@ -13,11 +12,9 @@ const btns = [
 function MyKeypad({ onButtonClick }) {
   return (
     <div className="my-calculator-keypad">
-      {/* 依照 btns 陣列動態產生每一列按鈕 */}
-      {btns.map((row, i) => (
-        <div key={i} className="my-calculator-keypad-row">
-          {row.map((val) => (
-            // 每個按鈕都呼叫 MyButton
+      {btns.map((row, i) => ( // 使用 map 迭代每一行按鈕
+        <div key={i} className="my-calculator-keypad-row"> {/*  */}
+          {row.map((val) => ( // 使用 map 迭代每一個按鈕
             <MyButton key={val} value={val} onClick={onButtonClick} />
           ))}
         </div>
