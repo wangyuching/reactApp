@@ -8,3 +8,9 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+// 在 HTML(index.html) 最上層找到 id 為 root 的根元素並 render 一個 App(App.jsx) 的元件。
+/* 
+  createRoot() : 建立根節點(指定的 DOM 元素( div id="root" ) ) ，讓 React 從這裡開始顯示、運作、管理整個 React 應用程式。
+  .render() : 將 React 元件( <App /> )顯示到指定的 DOM 元素( div id="root" )中
+*/
