@@ -19,7 +19,7 @@ function MyCalculator() {
       // prev 代表目前的 expression 字串。slice(0, -1) 回傳新陣列 : 第 0 個元素到倒數第 1 個元素（不包含最後一個），藉此刪掉最後一個字元。
     } else if (value === "=") {
       try {
-        const safeExp = expression.replace(/×/g, '*').replace(/÷/g, '/');
+        const safeExp = expression.replace(/×/g, '*').replace(/÷/g, '/'); // 將運算算式中的 × 替換成 * ， ÷ 替換成 / 。 字串.replace(搜尋內容, 替換內容)，/g : 全域搜尋（global search） / 搜索全部。  
         const evalResult = eval(safeExp);
         if (!isFinite(evalResult)) throw new Error("無效運算");
         setResult(evalResult);
