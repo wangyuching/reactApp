@@ -12,10 +12,8 @@ function MyButton({ value, onClick }) {
     btnClass = "my-calculator-btn control";
   }
   return (
-    <button
-      className={btnClass}
-      onClick={() => onClick(value)}
-    >
+  return (
+    <button className={btnClass} onClick={() => onClick(value)}>
       {value}
     </button>
   );
