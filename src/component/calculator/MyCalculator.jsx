@@ -20,16 +20,16 @@ function MyCalculator() {
     } else if (value === "=") {
       try {
         const safeExp = expression.replace(/×/g, '*').replace(/÷/g, '/'); // 將運算算式中的 × 替換成 * ， ÷ 替換成 / 。 字串.replace(搜尋內容, 替換內容)，/g : 全域搜尋（global search） / 搜索全部。  
-        const evalResult = eval(safeExp);
-        if (!isFinite(evalResult)) throw new Error("無效運算");
-        setResult(evalResult);
+        const evalResult = eval(safeExp); // 執行 safeExp 字串並計算
+        if (!isFinite(evalResult)) throw new Error("無效運算"); // 如果結果不是有限數（如除以零得到 Infinity 或 NaN），會丟出錯誤
+        setResult(evalResult); // 如果一切正常，顯示運算結果。
       } catch {
         setError("運算式錯誤或除以零");
         setResult("");
-      }
+      } // 如果上述步驟出錯（如算式不合法、除以零等），會顯示錯誤訊息，並清空結果。
     } else {
       setExpression((prev) => prev + value);
-    }
+    } // 把目前 expression 的值（prev）與新按下的按鍵值（value）組合成新的字串
   };
 
   return (
