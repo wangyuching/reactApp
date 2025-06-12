@@ -12,10 +12,10 @@ function MyButton({ value, onClick }) {
     btnClass = "my-calculator-btn control";
   }
   return (
-  return (
     <button className={btnClass} onClick={() => onClick(value)}>
       {value}
     </button>
+    {/* 點擊這個按鈕時，會把這個按鈕的 value 當作參數，呼叫 onClick 這個函式 */}
   );
 }
 
