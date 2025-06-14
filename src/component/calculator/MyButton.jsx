@@ -11,11 +11,10 @@ function MyButton({ value, onClick }) {
   } else if (isControl) { // 如果是控制鍵
     btnClass = "my-calculator-btn control";
   }
-  return (
+  return (//點擊這個按鈕時，會把這個按鈕的 value 當作參數，呼叫 onClick 這個函式
     <button className={btnClass} onClick={() => onClick(value)}>
       {value}
     </button>
-    {/* 點擊這個按鈕時，會把這個按鈕的 value 當作參數，呼叫 onClick 這個函式 */}
   );
 }
 
